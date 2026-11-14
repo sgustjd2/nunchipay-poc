@@ -1,0 +1,22 @@
+:root {
+  /* 중립 램프: 발표자료의 청회색 계열. 표면·테두리·글자는 모두 여기서 나온다 */
+  --ink: #191f28;
+  --ink-2: #4e5968;
+  --ink-3: #6b7684;
+  --line: rgba(25, 31, 40, 0.08);
+  --line-2: rgba(25, 31, 40, 0.14);
+  --surface: #ffffff;
+  --canvas: #f5f6f8;
+  --sunk: #eef0f3;
+  /* 포인트는 하나: 발표자료의 파랑. 선택·주요 행동·핵심 숫자에만 쓴다 */
+  --accent: #2d63f5;
+  --accent-ink: #1f4fd8;
+  --accent-soft: #eaf0ff;
+  --warn: #b93c0a;
+  --warn-soft: #fdf1ea;
+  /* 4px 격자 */
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 20px; --s6: 24px; --s8: 32px; --s10: 40px; --s12: 48px; --s16: 64px; --s24: 96px;
+  --r-ctl: 8px; --r-card: 12px; --r-panel: 16px; --r-xl: 24px;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+  --font: 'Pretendard', 'Pretendard Variable', 'Malgun Gothic', 'Apple SD Gothic Neo', system-ui, sans-serif;
+}

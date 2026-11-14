@@ -1,0 +1,29 @@
+.qd .ss-stage { background: transparent; overflow: hidden; }
+.qd .qd-win { position: absolute; left: 0; top: 0; width: 1100px; height: 760px; box-shadow: var(--ss-shadow-hero); }
+.qd .ss-stage[data-layout='compact'] .qd-win { width: 520px; }
+
+/* 실제 견적 화면의 카드를 그대로 쓰되, 장면에 맞게 설명 문장만 줄이고 간격을 좁힌다 */
+.qd .qd-real { display: grid; gap: 12px; padding: 16px; height: 100%; background: var(--canvas); color: var(--ink); font-family: var(--font); font-size: 16px; line-height: 1.5; pointer-events: none; }
+.qd .qd-grid { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 12px; align-items: start; }
+.qd .ss-stage[data-layout='compact'] .qd-grid { grid-template-columns: 1fr; }
+.qd .qd-main { display: grid; gap: 12px; min-width: 0; }
+.qd .qd-real .search-band { padding: 12px; }
+.qd .qd-real .search-band .pk__btn { min-height: 68px; }
+.qd .qd-real .ap-card { gap: 10px; padding: 16px; }
+.qd .qd-real .ap-note { display: none; }
+.qd .qd-real .ap-range { font-size: 40px; }
+.qd .qd-real .ap-basis { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px 16px; padding-top: 10px; }
+.qd .qd-real .ap-basis dd { font-size: 14px; }
+.qd .qd-real .ap-stance { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.qd .qd-real .ap-stance button { padding: 12px; }
+.qd .qd-real .ap-stance b { font-size: 22px; }
+.qd .qd-real .ap-posting__body { padding: 14px; }
+.qd .qd-real .ap-stance button[data-hover], .qd .qd-real .btn[data-hover] { filter: brightness(0.97); }
+.qd .ss-stage[data-layout='compact'] .qd-real .ap-basis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.qd .qd-real .search-band--3 { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, 0.8fr); }
+/* 남는 높이를 카드 안의 줄에 나눠 주지 않는다 */
+.qd .qd-real, .qd .qd-grid, .qd .qd-main, .qd .qd-real .ap-card { align-content: start; }
+/* 데모 틀이 바깥 스타일을 브라우저 기본값으로 되돌리므로 문단 여백을 다시 없앤다 */
+.qd .qd-real p, .qd .qd-real h2, .qd .qd-real h3, .qd .qd-real dl, .qd .qd-real dd, .qd .qd-real ul, .qd .qd-real ol, .qd .qd-real button { margin: 0; }
+.qd .qd-real ul, .qd .qd-real ol { padding: 0; list-style: none; }
+.qd .hint { display: none; }
