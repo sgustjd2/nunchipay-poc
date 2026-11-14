@@ -14,6 +14,14 @@ const LINKS: [string, string, string?][] = [
   ['#faq', 'FAQ'],
 ]
 
+// 로고를 누르면 맨 위로 올라간다. 홈에서는 주소가 이미 #/ 라서 이동 이벤트가 없으므로 직접 올린다
+function goTop(e: React.MouseEvent, route: Route) {
+  if (route !== 'home') return // 다른 페이지에서는 홈으로 이동하며 맨 위로 간다
+  e.preventDefault()
+  history.replaceState(null, '', location.pathname + location.search + '#/')
+  window.scrollTo({ top: 0 })
+}
+
 export function Nav({ route }: { route: Route }) {
   const [bar, setBar] = useState(true)
   return (
@@ -26,7 +34,7 @@ export function Nav({ route }: { route: Route }) {
       )}
       <header className="nav">
         <div className="nav__in">
-          <a className="nav__brand" href="#/">눈치페이</a>
+          <a className="nav__brand" href="#/" onClick={(e) => goTop(e, route)}>눈치페이</a>
           <nav className="nav__links" aria-label="주요 메뉴">
             {route === 'home' && LINKS.map(([href, label, badge]) => <a key={href} className="nav__link" href={href}>{label}{badge && <em className="nav__badge">{badge}</em>}</a>)}
           </nav>
